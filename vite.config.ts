@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   root: '.',
   publicDir: 'public',
-  base: process.env.GITHUB_PAGES ? '/twin-stick/' : '/',
+  base: './',
   build: {
     outDir: 'dist',
     minify: 'terser',
