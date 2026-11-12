@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import packageJson from './package.json' with { type: 'json' };
 
 export default defineConfig({
   root: '.',
@@ -11,5 +12,5 @@ export default defineConfig({
     rollupOptions: { output: { manualChunks: { phaser: ['phaser'] } } },
   },
   server: { port: 5173, open: true },
-  define: { 'import.meta.env.VITE_VERSION': JSON.stringify(process.env.npm_package_version) },
+  define: { 'import.meta.env.VITE_VERSION': JSON.stringify(packageJson.version) },
 });

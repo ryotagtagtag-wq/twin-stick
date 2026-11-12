@@ -103,7 +103,6 @@ export class CollisionSystem {
   }
 
   private createBullet(data: any, owner: 'player' | 'enemy'): void {
-    const { Bullet } = require('../entities/Bullet');
     const bullet = new Bullet(this.scene, {
       x: data.x,
       y: data.y,
