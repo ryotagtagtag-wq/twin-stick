@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:gh-pages": "GITHUB_PAGES=true tsc && vite build",
     "preview": "vite preview",
-    "deploy": "pnpm build && wrangler pages deploy dist"
+    "deploy": "pnpm build && wrangler pages deploy dist",
+    "deploy:gh-pages": "pnpm build:gh-pages && echo 'Push to main branch to trigger GitHub Pages deployment'"
   },
   "dependencies": {
     "phaser": "^3.80.1"
