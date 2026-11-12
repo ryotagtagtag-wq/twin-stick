@@ -33,6 +33,9 @@ jobs:
           node-version: 22
           cache: pnpm
 
+      - name: Approve build scripts
+        run: pnpm approve-builds esbuild sharp workerd --yes
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
